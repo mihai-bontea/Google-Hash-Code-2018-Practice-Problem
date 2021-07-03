@@ -9,7 +9,7 @@
 
 using namespace std;
 
-bool in_a_slice(vector<Rectang> *slices, pair<int, int> point, int max_size)
+inline bool in_a_slice(vector<Rectang> *slices, pair<int, int> point, int max_size)
 {
 	for (int line_index = point.first; line_index > max(point.first - max_size, 0); --line_index)
 		for (auto slice_it = slices[line_index].begin(); slice_it != slices[line_index].end(); ++slice_it)
@@ -18,7 +18,7 @@ bool in_a_slice(vector<Rectang> *slices, pair<int, int> point, int max_size)
 	return false;
 }
 
-bool slice_overlaps(vector<Rectang> *slices, Rectang &slice, int max_size)
+inline bool slice_overlaps(vector<Rectang> *slices, Rectang &slice, int max_size)
 {
 	for (int line_index = slice.upper_left.first; line_index > max(slice.upper_left.first - max_size, 0); --line_index)
 		for (auto slice_it = slices[line_index].begin(); slice_it != slices[line_index].end(); ++slice_it)
@@ -38,7 +38,7 @@ vector<Rectang> simulate(Data &data)
 	int current_surface = max_length * max_length;
 	while (current_surface <= data.max_size)
 	{
-		max_length++;
+		++max_length;
 		current_surface += max_size_root;
 	}
 
