@@ -1,5 +1,7 @@
 # Google Hash Code 2018 Practice Problem
 
+![ara](https://user-images.githubusercontent.com/79721547/125121484-ad5f0c80-e0fc-11eb-87e8-08394de3a31d.png)
+
 ## Representing the data
 
 A pizza is a two-dimensional array where **A[i][j]** can be either **M**(mushroom) or **T**(tomato). To simplify it further, I represent it as a bool matrix, which will help with the
