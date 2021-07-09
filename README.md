@@ -58,3 +58,16 @@ already occupied by other slices, but checking this would reduce the program spe
 * *medium.in*: 48077/50000
 * *big.in*: 848617/1000000
 * **total score**: 896740
+
+## Solution 4
+
+The final and best solution. For every **A[i][j]** the number of ingredients in the *general area* is determined. Based on the size of a slice, the ratio of the ingredients in the area and
+the number of rare ingredients used in the slice, a score is computed by the following formula: **score = size - (ingr_wasted * ratio * 10)**. This way, sometimes a bigger slice
+is penalized in the favor of a smaller slice which uses the available ingredients more efficiently. This can lead to cases where instead of a bigger slice being chosen,
+two smaller slices are chosen which have a combined area greater than the bigger slice.
+
+* *example.in*: 15/15
+* *small.in*: 41/42
+* *medium.in*: 48226/50000
+* *big.in*: 890123/1000000
+* **total score**: 938405
