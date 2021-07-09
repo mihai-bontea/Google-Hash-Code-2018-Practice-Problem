@@ -6,6 +6,8 @@
 
 using namespace std;
 
+extern int score;
+
 class Data
 {
 public:
@@ -61,6 +63,9 @@ public:
 		{
 			fout << (*slice_it).upper_left.first << " " << (*slice_it).upper_left.second << " ";
 			fout << (*slice_it).lower_right.first << " " << (*slice_it).lower_right.second << '\n';
+
+			score += (((*slice_it).lower_right.first - (*slice_it).upper_left.first + 1) *
+				((*slice_it).lower_right.second - (*slice_it).upper_left.second + 1));
 		}
 		fout.close();
 	}

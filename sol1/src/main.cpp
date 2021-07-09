@@ -6,8 +6,12 @@
 #include <string>
 #include <cmath>
 #include <Windows.h>
+#include <cassert>
 
 using namespace std;
+
+int score = 0;
+int total_score = 0;
 
 inline bool in_a_slice(vector<Rectang> *slices, pair<int, int> point, int max_size)
 {
@@ -41,7 +45,7 @@ vector<Rectang> simulate(Data &data)
 		++max_length;
 		current_surface += max_size_root;
 	}
-
+	//cout << "max length is " << max_length << endl;
 	for (int i = 1; i <= data.nr_rows; ++i)
 	{
 		for (int j = 1; j <= data.nr_columns; ++j)
@@ -99,11 +103,14 @@ int main()
 	{
 		cout << "Now working on " << (*in_file_it) << '\n';
 		Data data(in_prefix + (*in_file_it));
+		score = 0;
 
 		vector<Rectang> result = simulate(data);
 
 		string out_filename = out_prefix + (*in_file_it).substr(0, ((*in_file_it).find('.'))) + ".out";
 		data.output_to_file(out_filename, result);
+		cout << "Score is: " << score << "/" << data.nr_rows * data.nr_columns << '\n';
+		total_score += score;
 	}
 
 	system("pause");

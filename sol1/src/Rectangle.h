@@ -22,8 +22,8 @@ public:
 
 	bool overlaps(Rectang &other)
 	{
-		return (this->upper_left.first < other.lower_right.first && this->lower_right.first > other.upper_left.first &&
-				this->upper_left.second < other.lower_right.second && this->lower_right.second > other.upper_left.second);
+		return (this->upper_left.first <= other.lower_right.first && this->lower_right.first >= other.upper_left.first &&
+				this->upper_left.second <= other.lower_right.second && this->lower_right.second >= other.upper_left.second);
 	}
 
 	bool in_rectangle(pair<int, int> point)

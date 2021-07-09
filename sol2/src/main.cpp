@@ -10,6 +10,9 @@
 
 using namespace std;
 
+int score = 0;
+int total_score = 0;
+
 vector<pair<int, int> > gen_all_rect_sizes(Data &data)
 {
 	// Generate all pairs of <length, width> of rectangles with valid area
@@ -55,8 +58,6 @@ vector<Rectang> simulate(Data &data)
 
 	// Getting the vector containing all <length, width> pairs of valid rectangles
 	vector<pair<int, int>> all_rect_config = gen_all_rect_sizes(data);
-	for (int z = 0; z < all_rect_config.size(); ++z)
-		cout << all_rect_config[z].first << " " << all_rect_config[z].second << '\n';
 
 	for (int i = 1; i <= data.nr_rows; ++i)
 		for (int j = 1; j <= data.nr_columns; ++j)
@@ -115,11 +116,14 @@ int main()
 	{
 		cout << "Now working on " << (*in_file_it) << '\n';
 		Data data(in_prefix + (*in_file_it));
+		score = 0;
 
 		vector<Rectang> result = simulate(data);
 
 		string out_filename = out_prefix + (*in_file_it).substr(0, ((*in_file_it).find('.'))) + ".out";
 		data.output_to_file(out_filename, result);
+		cout << "Score is: " << score << "/" << data.nr_rows * data.nr_columns << '\n';
+		total_score += score;
 	}
 
 	system("pause");
