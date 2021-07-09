@@ -125,7 +125,7 @@ int main()
 		cout << "Score is: " << score << "/" << data.nr_rows * data.nr_columns << '\n';
 		total_score += score;
 	}
-
+	cout << "Total score: " << total_score << '\n';
 	system("pause");
 	return 0;
 }
