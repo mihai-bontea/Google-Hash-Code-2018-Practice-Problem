@@ -43,3 +43,18 @@ Similar to solution 1, except that in the beginning all possible pairs **<l, L>*
 * *medium.in*: 48240/50000
 * *big.in*: 845192/1000000
 * **total score**: 893472 
+
+## Solution 3
+
+In addition to solution 2, for every **A[i][j]** the number of ingredients in the *general area* is determined. This will be used when choosing between two slices which have the same
+size, the one using the least of the more rare ingredient being prefered. The size of the *general_area* that I used is **max_slice_area** * **max_slice_area**. Changing this size
+could result in better scores for some tests. Unfortunately, the number of ingredients of each type in this *general area* does not take into account that some pieces of it are
+already occupied by other slices, but checking this would reduce the program speed by a lot.
+
+#### Score
+
+* *example.in*: 12/15
+* *small.in*: 34/42
+* *medium.in*: 48077/50000
+* *big.in*: 848617/1000000
+* **total score**: 896740
