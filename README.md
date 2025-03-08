@@ -27,11 +27,13 @@ it can't create **n x 1** or **1 x n** rectangles for example, if the need arise
 
 #### Score
 
-* *example.in*: 12/15
-* *small.in*: 28/42
-* *medium.in*: 44550/50000
-* *big.in*: 607500/1000000
-* **total score**: 652090
+| File         | Score            |
+|-------------|----------------|
+| *example.in* | 12/15          |
+| *small.in*   | 28/42          |
+| *medium.in*  | 44550/50000    |
+| *big.in*     | 607500/1000000 |
+| **Total**    | **652090**  |
 
 ## Solution 2 
 
@@ -40,11 +42,13 @@ Similar to solution 1, except that in the beginning all possible pairs **<l, L>*
 
 #### Score
 
-* *example.in*: 12/15
-* *small.in*: 28/42
-* *medium.in*: 48240/50000
-* *big.in*: 845192/1000000
-* **total score**: 893472 
+| File         | Score            |
+|-------------|----------------|
+| *example.in* | 12/15          |
+| *small.in*   | 28/42          |
+| *medium.in*  | 48240/50000    |
+| *big.in*     | 845192/1000000 |
+| **Total**    | **893472**  |
 
 ## Solution 3
 
@@ -55,11 +59,13 @@ already occupied by other slices, but checking this would reduce the program spe
 
 #### Score
 
-* *example.in*: 12/15
-* *small.in*: 34/42
-* *medium.in*: 48077/50000
-* *big.in*: 848617/1000000
-* **total score**: 896740
+| File         | Score            |
+|-------------|----------------|
+| *example.in* | 12/15          |
+| *small.in*   | 34/42          |
+| *medium.in*  | 48077/50000    |
+| *big.in*     | 848617/1000000 |
+| **Total**    | **896740**  |
 
 ## Solution 4
 
@@ -68,8 +74,10 @@ the number of rare ingredients used in the slice, a score is computed by the fol
 is penalized in the favor of a smaller slice which uses the available ingredients more efficiently. This can lead to cases where instead of a bigger slice being chosen,
 two smaller slices are chosen which have a combined area greater than the bigger slice.
 
-* *example.in*: 15/15
-* *small.in*: 41/42
-* *medium.in*: 48226/50000
-* *big.in*: 890123/1000000
-* **total score**: 938405
+| File         | Score            |
+|-------------|----------------|
+| *example.in* | 12/15          |
+| *small.in*   | 41/42          |
+| *medium.in*  | 48226/50000    |
+| *big.in*     | 890123/1000000 |
+| **Total**    | **938405**  |
